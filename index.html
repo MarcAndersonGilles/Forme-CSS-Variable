@@ -4,18 +4,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link href="style.css" rel="stylesheet" />
+   <link href="style.css" rel="stylesheet" type="text/css" />
    <link href="dist/output.css" rel="stylesheet" />
   <title>Document</title>
+
+  <style>
+    :root {
+
+      --custom-color2:rgb(44, 185, 87); /* Change this to your desired color */
+      --custom-color-yellow:rgb(220, 248, 58); /* Change this to your */
+      --custom-padding: 25px;
+      --custom-margin:25px;
+      --custom-border-radius:5px;
+      --custom-width: 5em;
+      --custom-height: 5em;
+    }
+
+    <!-- .custom-text {
+      color: var(--custom-color);
+    } -->
+
+    .custom-text2 {
+      color: var(--custom-color2);
+      background-color: var(--custom-color-yellow) ;
+      padding: var(--custom-padding) ;
+      margin: var(--custom-margin);
+      border-radius:var(--custom-border-radius) ;
+      width: var(--custom-width);
+      height:  var(--custom-height);
+
+    }
+    
+    /* Your existing Tailwind CSS classes */
+    /* ... */
+  </style>
 </head>
 
 <div class="w-full h-full ">
   <div class="flex flex-col items-center">
     <div class="flex flex-col   mt-72 bg-black text-white gap-2 p-4 lg:-8 rounded-lg ">
    
-      <div class=" text-skin-base">dfsfd</div>
-
-     
+      <div class="custom-text2">dfsfd</div>
+      <!-- <div style="color: var(--text-color);">dfsfd</div> -->
+      <!-- <div class="text-[var(--custom-color)]">dfsfd</div>  doesnt work--> 
     </div>
     
   </div>
