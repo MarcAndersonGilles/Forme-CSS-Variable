@@ -10,20 +10,20 @@
 
   <style>
     :root {
-
-      --custom-color2:rgb(44, 185, 87); /* Change this to your desired color */
-      --custom-color-yellow:rgb(220, 248, 58); /* Change this to your */
+  
+      --custom-color2:#ffc600; /* Change this to your desired color */
+      --custom-color-yellow: #e74d0b;
       --custom-padding: 25px;
       --custom-margin:25px;
       --custom-border-radius:5px;
-      --custom-width: 5em;
-      --custom-height: 5em;
+      --custom-width: 100px;
+      --custom-height: 100px;
     }
-
-    <!-- .custom-text {
+  
+    .custom-text {
       color: var(--custom-color);
-    } -->
-
+    } 
+  
     .custom-text2 {
       color: var(--custom-color2);
       background-color: var(--custom-color-yellow) ;
@@ -32,7 +32,12 @@
       border-radius:var(--custom-border-radius) ;
       width: var(--custom-width);
       height:  var(--custom-height);
-
+  
+    }
+    html {
+      width: 100%;
+      height: 100%;
+      background-color: black;
     }
     
     /* Your existing Tailwind CSS classes */
@@ -40,68 +45,72 @@
   </style>
 </head>
 
-<div class="w-full h-full ">
+<div class="w-full h-full bg-black  ">
   <div class="flex flex-col items-center">
-    <div class="flex flex-col   mt-72  text-white gap-2 p-4 lg:-8 rounded-lg ">
+    <div class="flex flex-col    text-white gap-2 p-4 lg:-8 rounded-lg ">
    
-      <div class="custom-text2 ">dfsfd</div>
+      <div class="flex bg-black">
+      <div class="w-full h-full custom-text2 ">dfsfd</div>
+    </div>
       <!-- <div style="color: var(--text-color);">dfsfd</div> -->
       <!-- <div class="text-[var(--custom-color)]">dfsfd</div>  doesnt work--> 
 
 
-      <nav class="flex text-black ">
-        <ul class="flex flex-col ">
-  
-          <div class="flex flex-col">
-            <label for="">Color</label>
-            <input type="range" name="" id="">
-          </div>
-  
-          <div class="flex flex-col">
-            <label for="">Background Color</label>
-            <input type="range" name="" id="">
-          </div>
-  
-          <div class="flex flex-col">
-            <label for="">Padding</label>
-            <input type="range" name="" id="">
-          </div>
-          
-          <div class="flex flex-col">
-            <label for="">Margin</label>
-            <input type="range" name="" id="">
-          </div>
-  
-          <div class="flex flex-col">
-            <label for="">Border Radius</label>
-            <input type="range" name="" id="">
-          </div>
-  
-          <div class="flex flex-col">
-            <label for="">Width</label>
-            <input type="range" name="" id="">
-          </div>
-  
-          <div class="flex flex-col">
-            <label for="">Height</label>
-            <input type="range" name="" id="">
-          </div>
-  
-        </ul>
-      </nav>
+     
     </div>
 
-    
+    <nav class="flex text-black bg-white m-3 p-3 rounded-lg  ">
+      <ul class="flex flex-col controls ">
+
+        <div class="flex flex-col">
+          <label for="custom-color2">Color</label>
+          <input type="color" name="custom-color2" id="custom-color2" value="#ffc600" >
+        </div>
+
+        <div class="flex flex-col">
+          <label for="custom-color-yellow">Background Color</label>
+          <input type="color" name="custom-color-yellow" id="custom-color-yellow" value="#e74d0b" >
+        </div>
+
+        <div class="flex flex-col">
+          <label for="">Padding</label>
+          <input type="range" name="custom-padding" id="custom-padding" value="0" data-sizing="px">
+        </div>
+        
+        <div class="flex flex-col">
+          <label for="">Margin</label>
+          <input type="range" name="custom-margin" id="custom-margin" value="0" data-sizing="px">
+        </div>
+
+        <div class="flex flex-col">
+          <label for="">Border Radius</label>
+          <input type="range" value="0" name="custom-border-radius" id="custom-border-radius" data-sizing="px">
+        </div>
+
+        <div class="flex flex-col">
+          <label for="custom-width">Width</label>
+          <input type="range" value="10"  name="custom-width" value="10"    id="custom-width" data-sizing="px">
+        </div>
+
+        <div class="flex flex-col">
+          <label for="">Height</label>
+          <input type="range" name="custom-height" id="custom-height" value="10" data-sizing="px">
+        </div>
+
+      </ul>
+    </nav>
    
 
   </div>
 </div>
+
 <script src="main.js"></script>
 
 <script>
 
 
 </script>
+
 </body>
 
 </html>
